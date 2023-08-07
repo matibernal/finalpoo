@@ -4,21 +4,19 @@ import java.util.ArrayList;
 
 public class Grupo {
 
-    private int id;
+    private String id;
     private ArrayList<Partido> partidos;
     private ArrayList<Equipo> equipos;
 
-    public Grupo(int id, ArrayList<Partido> partidos, ArrayList<Equipo> equipos) {
+    public Grupo(String id) {
         this.id = id;
-        this.partidos = partidos;
-        this.equipos = equipos;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -34,7 +32,8 @@ public class Grupo {
         return equipos;
     }
 
-    public void setEquipos(ArrayList<Equipo> equipos) {
-        this.equipos = equipos;
+    public void addEquipo(Equipo equipos) {
+        this.equipos.add(equipos);
     }
+
 }
