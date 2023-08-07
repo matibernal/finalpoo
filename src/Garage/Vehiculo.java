@@ -9,6 +9,9 @@ public class Vehiculo {
     private int ruedas;
     private int km;
 
+    public Vehiculo(){
+
+    }
     public Vehiculo(String motor, int cantidadDeCombustible, String patente, String marca, int ruedas, int km) {
         this.motor = motor;
         this.cantidadDeCombustible = cantidadDeCombustible;
