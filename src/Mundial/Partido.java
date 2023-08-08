@@ -8,9 +8,9 @@ public class Partido {
     private Equipo local;
     private Equipo visitante;
     private Date fecha;
-    private String resultado;
+    private Resultado resultado;
 
-    public Partido(int id, Equipo local, Equipo visitante, Date fecha, String resultado) {
+    public Partido(int id, Equipo local, Equipo visitante, Date fecha, Resultado resultado) {
         this.id = id;
         this.local = local;
         this.visitante = visitante;
@@ -50,11 +50,11 @@ public class Partido {
         this.fecha = fecha;
     }
 
-    public String getResultado() {
+    public Resultado getResultado() {
         return resultado;
     }
 
-    public void setResultado(String resultado) {
+    public void setResultado(Resultado resultado) {
         this.resultado = resultado;
     }
 }

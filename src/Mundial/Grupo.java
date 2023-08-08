@@ -10,6 +10,8 @@ public class Grupo {
 
     public Grupo(String id) {
         this.id = id;
+        this.partidos = new ArrayList<>();
+        this.equipos = new ArrayList<>();
     }
 
     public String getId() {
@@ -24,8 +26,8 @@ public class Grupo {
         return partidos;
     }
 
-    public void setPartidos(ArrayList<Partido> partidos) {
-        this.partidos = partidos;
+    public void addPartidos(Partido partidos) {
+        this.partidos.add(partidos);
     }
 
     public ArrayList<Equipo> getEquipos() {
