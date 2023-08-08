@@ -46,4 +46,14 @@ public class Resultado {
     public void setEmpato(boolean empato) {
         this.empato = empato;
     }
+
+    @Override
+    public String toString() {
+        return "Resultado" +
+                "golesLocal=" + golesLocal +
+                ", golesVisitante=" + golesVisitante +
+                ", ganoLocal=" + ganoLocal +
+                ", empato=" + empato +
+                '}';
+    }
 }

@@ -211,7 +211,103 @@ public class Main {
         H.addPartidos(nr47);
         H.addPartidos(nr48);
 
-    
+        JOptionPane.showMessageDialog(null,"Bienvenido a mi programa","Final POO", JOptionPane.INFORMATION_MESSAGE);
+        int a = 0;
+        String[] opciones = {"Mundial", "Garage", "Salir"};
+        String menu= "";
+        do{
+            menu = (String)JOptionPane.showInputDialog(null,"Seleccione lo que desea: ", "Final POO", JOptionPane.DEFAULT_OPTION, null, opciones,opciones);
+            switch (menu){
+                case "Mundial":
+                    String[] mundialito = {"Grupos", "Llave","Salir"};
+                    String op="";
+                    do{
+                        op=(String)JOptionPane.showInputDialog(null,"Seleccione una opcion: ", "Final POO", JOptionPane.DEFAULT_OPTION,null, mundialito, mundialito);
+                        switch (op){
+                            case "Grupos":
+                                String[] opg= {"A","B","C","D","E","F","G","H"};
+                                op= (String)JOptionPane.showInputDialog(null,"Seleccione que grupo desea ver: ","Final POO", JOptionPane.DEFAULT_OPTION, null, opg, opg);
+                                switch (op) {
+                                    case "A" -> {
+                                        String[] opgg = {"Equipos", "Partidos"};
+                                        op = (String) JOptionPane.showInputDialog(null, "¿Desea ver los equipos o los partidos?", "Final POO", JOptionPane.DEFAULT_OPTION, null, opgg, opgg);
+                                        switch (op) {
+                                            case "Equipos" -> JOptionPane.showMessageDialog(null, "Equipos en el grupo " + A.getId() + ": \n\n" + A.mostrarEquipos());
+                                            case "Partidos" -> JOptionPane.showMessageDialog(null, "Partidos en el grupo " + A.getId() + ": \n\n" + A.mostrarPartidos());
+                                        }
+                                    }
+                                    case "B" -> {
+                                        String[] opg2 = {"Equipos", "Partidos"};
+                                        op = (String) JOptionPane.showInputDialog(null, "¿Desea ver los equipos o los partidos?", "Final POO", JOptionPane.DEFAULT_OPTION, null, opg2, opg2);
+                                        switch (op) {
+                                            case "Equipos" -> JOptionPane.showMessageDialog(null, "Equipos en el grupo " + B.getId() + ": \n\n" + B.mostrarEquipos());
+                                            case "Partidos" -> JOptionPane.showMessageDialog(null, "Partidos en el grupo " + B.getId() + ": \n\n" + B.mostrarPartidos());
+                                        }
+                                    }
+                                    case "C" -> {
+                                        String[] opg3 = {"Equipos", "Partidos"};
+                                        op = (String) JOptionPane.showInputDialog(null, "¿Desea ver los equipos o los partidos?", "Final POO", JOptionPane.DEFAULT_OPTION, null, opg3, opg3);
+                                        switch (op) {
+                                            case "Equipos" -> JOptionPane.showMessageDialog(null, "Equipos en el grupo " + C.getId() + ": \n\n" + C.mostrarEquipos());
+                                            case "Partidos" -> JOptionPane.showMessageDialog(null, "Partidos en el grupo " + C.getId() + ": \n\n" + C.mostrarPartidos());
+                                        }
+                                    }
+                                    case "D" -> {
+                                        String[] opg4 = {"Equipos", "Partidos"};
+                                        op = (String) JOptionPane.showInputDialog(null, "¿Desea ver los equipos o los partidos?", "Final POO", JOptionPane.DEFAULT_OPTION, null, opg4, opg4);
+                                        switch (op) {
+                                            case "Equipos" -> JOptionPane.showMessageDialog(null, "Equipos en el grupo " + D.getId() + ": \n\n" + D.mostrarEquipos());
+                                            case "Partidos" -> JOptionPane.showMessageDialog(null, "Partidos en el grupo " + D.getId() + ": \n\n" + D.mostrarPartidos());
+                                        }
+                                    }
+                                    case "E" -> {
+                                        String[] opg5 = {"Equipos", "Partidos"};
+                                        op = (String) JOptionPane.showInputDialog(null, "¿Desea ver los equipos o los partidos?", "Final POO", JOptionPane.DEFAULT_OPTION, null, opg5, opg5);
+                                        switch (op) {
+                                            case "Equipos" -> JOptionPane.showMessageDialog(null, "Equipos en el grupo " + E.getId() + ": \n\n" + E.mostrarEquipos());
+                                            case "Partidos" -> JOptionPane.showMessageDialog(null, "Partidos en el grupo " + E.getId() + ": \n\n" + E.mostrarPartidos());
+                                        }
+                                    }
+                                    case "F" -> {
+                                        String[] opg6 = {"Equipos", "Partidos"};
+                                        op = (String) JOptionPane.showInputDialog(null, "¿Desea ver los equipos o los partidos?", "Final POO", JOptionPane.DEFAULT_OPTION, null, opg6, opg6);
+                                        switch (op) {
+                                            case "Equipos" -> JOptionPane.showMessageDialog(null, "Equipos en el grupo " + F.getId() + ": \n\n" + F.mostrarEquipos());
+                                            case "Partidos" -> JOptionPane.showMessageDialog(null, "Partidos en el grupo " + F.getId() + ": \n\n" + F.mostrarPartidos());
+                                        }
+                                    }
+                                    case "G" -> {
+                                        String[] opg7 = {"Equipos", "Partidos"};
+                                        op = (String) JOptionPane.showInputDialog(null, "¿Desea ver los equipos o los partidos?", "Final POO", JOptionPane.DEFAULT_OPTION, null, opg7, opg7);
+                                        switch (op) {
+                                            case "Equipos" -> JOptionPane.showMessageDialog(null, "Equipos en el grupo " + G.getId() + ": \n\n" + G.mostrarEquipos());
+                                            case "Partidos" -> JOptionPane.showMessageDialog(null, "Partidos en el grupo " + G.getId() + ": \n\n" + G.mostrarPartidos());
+                                        }
+                                    }
+                                    case "H" -> {
+                                        String[] opg8 = {"Equipos", "Partidos"};
+                                        op = (String) JOptionPane.showInputDialog(null, "¿Desea ver los equipos o los partidos?", "Final POO", JOptionPane.DEFAULT_OPTION, null, opg8, opg8);
+                                        switch (op) {
+                                            case "Equipos" -> JOptionPane.showMessageDialog(null, "Equipos en el grupo " + H.getId() + ": \n\n" + H.mostrarEquipos());
+                                            case "Partidos" -> JOptionPane.showMessageDialog(null, "Partidos en el grupo " + H.getId() + ": \n\n" + H.mostrarPartidos());
+                                        }
+                                    }
+                                }
+                                break;
+                            case "Llave":
+                                
+                                break;
+                        }
+
+                    }while(!op.equals("Salir"));
+
+                    break;
+            }
+
+        }while (!menu.equals("Salir"));
+
+
+        /**/
 
     }
 }
