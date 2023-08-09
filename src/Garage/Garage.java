@@ -12,14 +12,14 @@ public class Garage {
     private Vehiculo kilometrosTotales;
 
 
-    public Garage(int capacidad, Date horarioDeApertura, String direccion, int stockDeRuedas, int precioDeRuedas, boolean espacioDisponible, Vehiculo kilometrosTotales) {
+    public Garage(int capacidad, Date horarioDeApertura, String direccion, int stockDeRuedas, int precioDeRuedas, boolean espacioDisponible) {
         this.capacidad = capacidad;
         this.horarioDeApertura = horarioDeApertura;
         this.direccion = direccion;
         this.stockDeRuedas = stockDeRuedas;
         this.precioDeRuedas = precioDeRuedas;
         this.espacioDisponible = espacioDisponible;
-        this.kilometrosTotales = kilometrosTotales;
+
     }
 
     public int getCapacidad() {

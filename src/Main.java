@@ -1,3 +1,4 @@
+import Garage.Garage;
 import Mundial.Equipo;
 import Mundial.Grupo;
 import Mundial.Partido;
@@ -97,6 +98,10 @@ public class Main {
         H.addEquipo(Uruguay);
         H.addEquipo(Ghana);
 
+        Grupo Octavos = new Grupo("Octavos");
+        Grupo Cuartos = new Grupo("Cuartos");
+        Grupo Semis = new Grupo("Semis");
+        Grupo Final = new Grupo("Final");
         //CREACION DE PARTIDOS Y AGREGADOS AL GRUPO
 
         //GRUPO A
@@ -211,6 +216,47 @@ public class Main {
         H.addPartidos(nr47);
         H.addPartidos(nr48);
 
+        //OCTAVOS DE FINAL
+        Partido nr49 = new Partido(49,Holanda,USA,new Date(2022,11,3),new Resultado(3,1,true,false));
+        Partido nr50 = new Partido(50,Argentina,Australia,new Date(2022,11,3),new Resultado(2,1,true,false));
+        Partido nr51 = new Partido(51,Japon,Croacia,new Date(2022,11,5),new Resultado(1,1,false,false));
+        Partido nr52 = new Partido(52,Brasil,coreaSur,new Date(2022,11,5),new Resultado(4,1,true,false));
+        Partido nr53 = new Partido(53,Inglaterra,Senegal,new Date(2022,11,4),new Resultado(3,0,true,false));
+        Partido nr54 = new Partido(54,Francia,Polonia,new Date(2022,11,4),new Resultado(3,1,true,false));
+        Partido nr55 = new Partido(55,Marruecos,Espana,new Date(2022,11,6),new Resultado(0,0,true,false));
+        Partido nr56 = new Partido(56,Portugal,Suiza,new Date(2022,11,6),new Resultado(6,1,true,false));
+        Octavos.addPartidos(nr49);
+        Octavos.addPartidos(nr50);
+        Octavos.addPartidos(nr51);
+        Octavos.addPartidos(nr52);
+        Octavos.addPartidos(nr53);
+        Octavos.addPartidos(nr54);
+        Octavos.addPartidos(nr55);
+        Octavos.addPartidos(nr56);
+
+        //CUARTOS DE FINAL
+        Partido nr57 = new Partido(57,Holanda,Argentina,new Date(2022,11,9),new Resultado(2,2,false,false));
+        Partido nr58 = new Partido(58,Croacia,Brasil,new Date(2022,11,9),new Resultado(1,1,true,false));
+        Partido nr59 = new Partido(59,Inglaterra,Francia,new Date(2022,11,10),new Resultado(1,2,false,false));
+        Partido nr60 = new Partido(60,Marruecos,Portugal,new Date(2022,11,10),new Resultado(1,0,true,false));
+        Cuartos.addPartidos(nr57);
+        Cuartos.addPartidos(nr58);
+        Cuartos.addPartidos(nr59);
+        Cuartos.addPartidos(nr60);
+
+        //SEMIS
+        Partido nr61 = new Partido(61,Argentina,Croacia,new Date(2022,11,13), new Resultado(3,0,true,false));
+        Partido nr62 = new Partido(62,Francia,Marruecos,new Date(2022,11,14), new Resultado(2,0,true,false));
+        Semis.addPartidos(nr61);
+        Semis.addPartidos(nr62);
+
+        //FINAL
+        Partido nr63 = new Partido(63,Argentina,Francia,new Date(2022,11,18), new Resultado(3,3,true,false));
+        Final.addPartidos(nr63);
+
+        //CREACION DE GARAGE
+        Garage garej = new Garage(8, new Date(2023,7,10, 16,0,0),"Rodriguez Nasso 86", 16, 2000, true);
+
         JOptionPane.showMessageDialog(null,"Bienvenido a mi programa","Final POO", JOptionPane.INFORMATION_MESSAGE);
         int a = 0;
         String[] opciones = {"Mundial", "Garage", "Salir"};
@@ -219,7 +265,7 @@ public class Main {
             menu = (String)JOptionPane.showInputDialog(null,"Seleccione lo que desea: ", "Final POO", JOptionPane.DEFAULT_OPTION, null, opciones,opciones);
             switch (menu){
                 case "Mundial":
-                    String[] mundialito = {"Grupos", "Llave","Salir"};
+                    String[] mundialito = {"Grupos", "Llaves","Salir"};
                     String op="";
                     do{
                         op=(String)JOptionPane.showInputDialog(null,"Seleccione una opcion: ", "Final POO", JOptionPane.DEFAULT_OPTION,null, mundialito, mundialito);
@@ -294,13 +340,37 @@ public class Main {
                                     }
                                 }
                                 break;
-                            case "Llave":
-                                
+                            case "Llaves":
+                                String[] llaves = {"Octavos", "Cuartos", "Semis", "Final","Salir"};
+                                String llave = "";
+                                do {
+                                    llave=(String)JOptionPane.showInputDialog(null,"Ingrese que llave desea ver", "Final POO", JOptionPane.DEFAULT_OPTION, null, llaves,llaves);
+                                    switch (llave) {
+                                        case "Octavos" -> JOptionPane.showMessageDialog(null, "Partidos de Octavos de final: \n\n" + Octavos.mostrarPartidos() + "Pasa " + Croacia.getName() + " por penales 3 a 1\nPasa " + Marruecos.getName() + " por penales 3 a 0");
+                                        case "Cuartos" -> JOptionPane.showMessageDialog(null, "Partidos de Cuartos de final: \n\n" + Cuartos.mostrarPartidos() + "Pasa " + Argentina.getName() + " por penales 4 a 3\nPasa " + Croacia.getName() + " por penales 4 a 2");
+                                        case "Semis" -> JOptionPane.showMessageDialog(null, "Partidos de Semis de final: \n\n" + Semis.mostrarPartidos());
+                                        case "Final" -> JOptionPane.showMessageDialog(null, "Partido de final: \n\n" + Final.mostrarPartidos() + "ARGENTINA CAMPEON DEL MUNDO POR PENALES 4 a 2");
+                                    }
+
+
+                                }while (!llaves.equals("Salir"));
                                 break;
                         }
 
                     }while(!op.equals("Salir"));
 
+                    break;
+                case "Garage":
+                    String[] garaje = {"Ver garage", "Usar garages", "Salir"};
+                    String gar = "";
+                    do{
+                        gar=(String)JOptionPane.showInputDialog(null,"Ingrese que desea hacer", "Final POO", JOptionPane.DEFAULT_OPTION, null, garaje,garaje);
+                        switch (gar){
+                            case "Ver garage":
+                                
+                                break;
+                        }
+                    }while (!gar.equals("Salir"));
                     break;
             }
 

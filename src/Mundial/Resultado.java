@@ -12,7 +12,6 @@ public class Resultado {
         this.golesVisitante = golesVisitante;
         this.ganoLocal = ganoLocal;
         this.empato = empato;
-
     }
 
     public int getGolesLocal() {
