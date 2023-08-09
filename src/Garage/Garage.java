@@ -77,4 +77,15 @@ public class Garage {
     public void setKilometrosTotales(Vehiculo kilometrosTotales) {
         this.kilometrosTotales = kilometrosTotales;
     }
+
+    public String mostrarGarage(){
+        StringBuilder infoGarage = new StringBuilder();
+        infoGarage.append("Capacidad: ").append(getCapacidad())
+                .append("\n\nFecha y horario de apertura: ").append(getHorarioDeApertura())
+                .append("\n\nDireccion: ").append(getDireccion())
+                .append("\n\nStock de ruedas: ").append(getStockDeRuedas())
+                .append("\n\nPrecio de cada rueda: ").append(getPrecioDeRuedas())
+                .append("\n\nGarage con espacio disponible: ").append(isEspacioDisponible());
+        return infoGarage.toString();
+    }
 }
